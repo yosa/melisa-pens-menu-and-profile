@@ -11,7 +11,10 @@ Ext.define('Melisa.pens.view.menuAndProfile.menu.Header', {
         {
             xtype: 'container',
             cls: 'avatar-wrapper',
-            html: '<img class="avatar" src="images/zooey.png" />'
+            tpl: '<img class="avatar" src="{server}images/zooey.png" />',
+            data: {
+                server: Ext.manifest.melisa.server
+            }
         },
         {
             xtype: 'button',
