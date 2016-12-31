@@ -46,6 +46,16 @@
             
         }
         
+        /* fix align center */
+        /* https://css-tricks.com/snippets/css/css-hacks-targeting-firefox/ */
+        @-moz-document url-prefix() {
+            .avatar,
+            .detail {
+                margin-left: -48px;
+            }
+
+        }
+        
     }
     
     .x-button.data
