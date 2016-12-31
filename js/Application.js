@@ -5,11 +5,11 @@
 
 Ext.manifest = {
 	melisa: {
-		server: !window.location.href.indexOf('codepen') ? window.location.href :
+		server: window.location.href.indexOf('codepen') === -1 ? window.location.href :
             'https://yosa.github.io/melisa-pens-menu-and-profile/'
 	}
 };
-
+console.log(Ext.manifest.melisa.server);
 Ext.application({
     name: 'Melisa.pens',
     

@@ -2,6 +2,12 @@ Ext.define('Melisa.pens.view.menuAndProfile.WrapperController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.wrapper',
     
+    listen: {
+        global: {
+            activemodule: 'onActiveModule'
+        }
+    },
+    
     onTapBtnMenu: function() {
         
         var me = this,
@@ -26,12 +32,17 @@ Ext.define('Melisa.pens.view.menuAndProfile.WrapperController', {
         
     },
     
-    onTapBtnProfile: function() {
-        alert('asd')
-        var me = this;
-        console.log('entro');
-        me.getView().setActiveItem(1);
+    onActiveModule: function(module) {
         
+        var me = this;
+        
+        me.getView().setActiveItem(module);
+        
+    },
+    
+    onBtnProfileClose: function() {
+        
+        this.getView().setActiveItem(0);
     }
     
 });

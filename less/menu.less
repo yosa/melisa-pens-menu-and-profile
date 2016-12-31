@@ -7,28 +7,47 @@
         height: 30%;
         min-height: 220px;
         position: relative;
-        
-        .avatar-wrapper
-        {
-            height: 100%;
-        }
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
         
         .avatar
         {
-            width: 100px;
-            height: 100px;
+            width: 115px;
+            height: 115px;
             border-radius: 50%;
+            bottom: 75px;
             position: absolute;
-            bottom: 10px;
+            left: 15px;
+            
+            img
+            {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                margin-top: 8px;
+                margin-left: 0px;
+            }
+            
         }
         
         .change-profile
         {
             text-transform: none;
-            color: #474A4F;
             width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: 8px;
+            
+            .x-button-label
+            {
+                padding-left: 15px;
+                color: @color-primary;
+            }
+            
+            .email
+            {
+                color: @color-secondary;
+                font-weight: 300;
+            }
+            
         }
         
     }
@@ -36,6 +55,57 @@
     .options
     {
         height: 70%;
+        margin-top: 14px;
+        
+        .x-button
+        {
+            padding-left: 20px;
+            
+            .x-button-label
+            {
+                padding: 10px 0px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+            }
+            
+            .x-badge
+            {
+                right: 10%;
+                left: auto;
+                top: 13px;
+            }
+            
+        }
+        
+        .x-hasbadge .x-badge
+        {
+            background-color: @color-green-bold;
+            color: #fff;
+            box-shadow: none;
+        }
+        
+        .x-button-icon
+        {
+            margin-right: 01em;
+        }
+        
+    }
+    
+    .x-button-label,
+    .x-button .x-button-icon
+    {
+        color: @color-secondary;
+    }
+    
+    .x-button-pressing
+    {
+        .x-button-icon,
+        .x-button-label
+        {
+            color: @color-green-bold;
+        }
+        
     }
     
 }
