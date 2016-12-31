@@ -2,6 +2,11 @@ Ext.define('Melisa.pens.view.menuAndProfile.menu.Options', {
     extend: 'Ext.Container',
     alias: 'widget.menuoptions',
     
+    requires: [
+        'Melisa.pens.view.menuAndProfile.menu.OptionsController'
+    ],
+    
+    controller: 'options',
     layout: 'vbox',
     cls: 'options',
     defaults: {
@@ -22,28 +27,27 @@ Ext.define('Melisa.pens.view.menuAndProfile.menu.Options', {
             iconCls: 'x-fa fa fa-heart'
         },
         {
-            xtype: 'container',
-            html: '<hr>'
+            xtype: 'separator'
         },
         {
             text: 'Favourites',
-            iconCls: 'x-fa fa fa-start'
+            iconCls: 'x-fa fa fa-star-o'
         },
         {
             text: 'My services',
-            iconCls: 'x-fa fa fa-idea'
+            badgeText: 3,
+            iconCls: 'x-fa fa fa-lightbulb-o'
         },
         {
             text: 'History',
-            iconCls: 'x-fa fa fa-heart'
+            iconCls: 'x-fa fa fa-history'
         },
         {
             text: 'Profile',
-            iconCls: 'x-fa fa fa-heart'
+            iconCls: 'x-fa fa fa-user'
         },
         {
-            xtype: 'container',
-            html: '<hr>'
+            xtype: 'separator'
         },
         {
             text: 'About',

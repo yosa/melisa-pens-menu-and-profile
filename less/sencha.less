@@ -1,0 +1,57 @@
+.x-button.x-button-pressing, .x-button.x-button-pressed
+{
+    background-color: #EDF7ED;
+}
+
+.x-button
+{
+    color: #EDF7ED;
+    
+}
+
+.x-button-label
+{
+    text-transform: none;
+}
+
+.x-titlebar
+{
+    background: #fff;
+    z-index:1;
+    
+    .x-button
+    {
+        background-color: transparent;
+    }
+    
+    .x-title .x-innerhtml
+    {
+        color: @color-primary;
+    }
+    
+    .x-button-icon,
+    .x-button-label,
+    .x-button-alt.x-button-pressing .x-button-icon, 
+    .x-button-alt.x-button-pressed .x-button-icon
+    {
+        color: @color-primary;
+    }
+    
+    /* fix center */
+    .x-button-icon.fa-ellipsis-v::before
+    {
+        position: absolute;
+        right: 50%;
+    }
+    
+}
+
+.x-mask .x-mask-message
+{
+    color: #fff;
+}
+
+.separator
+{
+    border-top: 1pt solid @color-separator;
+}
