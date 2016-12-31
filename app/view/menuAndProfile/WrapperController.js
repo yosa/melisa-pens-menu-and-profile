@@ -5,7 +5,16 @@ Ext.define('Melisa.pens.view.menuAndProfile.WrapperController', {
     listen: {
         global: {
             activemodule: 'onActiveModule'
-        }
+        }        
+    },
+    
+    onFirstPainted: function() {
+        
+        var me = this;
+        
+        me.getView().un('onFirstPainted', me.onFirstPainted);
+        me.onTapBtnMenu();
+        
     },
     
     onTapBtnMenu: function() {

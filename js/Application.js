@@ -9,7 +9,7 @@ Ext.manifest = {
             'https://yosa.github.io/melisa-pens-menu-and-profile/'
 	}
 };
-console.log(Ext.manifest.melisa.server);
+
 Ext.application({
     name: 'Melisa.pens',
     
