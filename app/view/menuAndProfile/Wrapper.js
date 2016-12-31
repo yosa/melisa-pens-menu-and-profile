@@ -25,5 +25,8 @@ Ext.define('Melisa.pens.view.menuAndProfile.Wrapper', {
         {
             xtype: 'profilewrapper'
         }
-    ]
+    ],
+    listeners: {
+        painted: 'onFirstPainted'
+    }
 });
